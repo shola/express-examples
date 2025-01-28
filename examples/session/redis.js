@@ -21,7 +21,8 @@ app.use(session({
   resave: false, // don't save session if unmodified
   saveUninitialized: false, // don't create session until something stored
   secret: 'keyboard cat',
-  store: new RedisStore
+  store: new RedisStore // TIL you can omit parentheses
+  // when constructing an object.
 }));
 
 app.get('/', function(req, res){
